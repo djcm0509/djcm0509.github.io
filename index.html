@@ -3,449 +3,469 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0c2a24">
+<meta name="theme-color" content="#121212">
 <meta property="og:title" content="David Maghanoy · US &amp; AU Accountant">
 <meta property="og:description" content="HOA and community association accounting, bookkeeping and month-end close for US and Australian clients.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2218%22 fill=%22%230c2a24%22/%3E%3Ctext x=%2232%22 y=%2241%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2224%22 fill=%22%23f4f8f6%22 text-anchor=%22middle%22%3EDM%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 fill=%22%23b8f26b%22/%3E%3Ctext x=%2232%22 y=%2242%22 font-family=%22monospace%22 font-weight=%22700%22 font-size=%2226%22 fill=%22%23101010%22 text-anchor=%22middle%22%3EDM%3C/text%3E%3C/svg%3E">
 <title>David Maghanoy · US &amp; AU Accountant</title>
 <meta name="description" content="David Maghanoy, US & AU Accountant. HOA and community association accounting, full-cycle bookkeeping and month-end close for US and Australian clients.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
-/* Layout: a modern profile card. A deep emerald hero with a soft light bloom holds the name and quick actions; below, a two-up tile grid for links and clean ruled sections for contact, experience and tools. */
+/* Layout: neo-brutalist link-in-bio on a dark drafting grid. Pixel display type, a framed "screen" intro, hard-shadow tiles for links, folder tabs for roles and an archive card for credentials. One committed dark look. */
 :root {
-  --page: #f2f4f3;
-  --sheet: #ffffff;
-  --ink: #0f1a17;
-  --muted: #5f6d69;
-  --rule: #e3e8e6;
-  --hero: #0c2a24;
-  --hero-ink: #f4f8f6;
-  --hero-muted: #a6bfb8;
-  --accent: #128a6a;
-  --accent-soft: #e5f3ee;
-  --glow: #2fd3a0;
-  --font-display: "Geist", "SF Pro Display", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-body: "Geist", "SF Pro Text", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --page: #080d0c; --sheet: #101816; --ink: #e8efec; --muted: #94a49f; --rule: #1f2b28;
-    --hero: #0b2520; --hero-ink: #f1f7f4; --hero-muted: #9db8b0;
-    --accent: #4fd1a8; --accent-soft: #15241f; --glow: #2fd3a0;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --page: #080d0c; --sheet: #101816; --ink: #e8efec; --muted: #94a49f; --rule: #1f2b28;
-  --hero: #0b2520; --hero-ink: #f1f7f4; --hero-muted: #9db8b0;
-  --accent: #4fd1a8; --accent-soft: #15241f; --glow: #2fd3a0;
   color-scheme: dark;
+  --bg: #121212;
+  --grid: rgba(255, 255, 255, 0.045);
+  --panel: #1b1b1b;
+  --text: #ededea;
+  --muted: #8d8d88;
+  --ink: #101010;
+  --lime: #b8f26b;
+  --lime-deep: #5e8a2c;
+  --yellow: #f4c534;
+  --yellow-deep: #9b7a12;
+  --blue: #3561f0;
+  --blue-deep: #1a3192;
+  --cream: #eee8d6;
+  --cream-deep: #8a8574;
+  --stamp: #2a4fd6;
+  --font-pixel: "Silkscreen", "Courier New", ui-monospace, monospace;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
-
 * { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
-  background: var(--page);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 15px;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 14px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
-a { color: inherit; }
-.wrap { padding-inline: 16px; padding-block: 24px 40px; }
-.card {
-  max-width: 480px;
+::selection { background: var(--lime); color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+.page {
+  max-width: 620px;
   margin: 0 auto;
-  background: var(--sheet);
-  border: 1px solid var(--rule);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 1px 2px rgba(8, 25, 20, 0.04), 0 20px 48px -24px rgba(8, 25, 20, 0.22);
-}
-
-/* Hero */
-.band {
-  position: relative;
-  isolation: isolate;
-  background: var(--hero);
-  color: var(--hero-ink);
-  padding: 24px 24px 26px;
+  padding-inline: 18px;
+  padding-block: 20px 48px;
   display: grid;
-  gap: 20px;
-  overflow: hidden;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 44px;
 }
-.band::before {
-  content: "";
-  position: absolute; z-index: -1;
-  width: 340px; height: 340px; right: -120px; top: -150px;
-  background: radial-gradient(circle, rgba(47, 211, 160, 0.38), rgba(47, 211, 160, 0) 65%);
-}
-.band::after {
-  content: "";
-  position: absolute; z-index: -1; inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 28px 28px;
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 70%);
-          mask-image: linear-gradient(180deg, #000 0%, transparent 70%);
-}
-.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.mono {
-  width: 60px; height: 60px;
-  border-radius: 18px;
-  background: linear-gradient(145deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
-  border: 1px solid rgba(255,255,255,0.18);
-  display: grid; place-items: center;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 21px;
-  letter-spacing: -0.02em;
-}
-.status {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 12px; font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  color: var(--hero-ink);
-}
-.status i { width: 7px; height: 7px; border-radius: 50%; background: var(--glow); box-shadow: 0 0 0 3px rgba(47, 211, 160, 0.22); }
-h1 {
-  margin: 0;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(32px, 9vw, 40px);
-  line-height: 1.02;
-  letter-spacing: -0.035em;
-  text-wrap: balance;
-}
-.eyebrow {
-  margin: 8px 0 0;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--glow);
-  letter-spacing: -0.005em;
-}
-.lede { margin: 10px 0 0; color: var(--hero-muted); font-size: 14.5px; max-width: 40ch; }
-.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.btn {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  min-height: 46px;
-  border-radius: 14px;
-  font: 600 14px var(--font-body);
-  text-decoration: none;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.07);
-  color: var(--hero-ink);
-  transition: background-color .15s ease, transform .15s ease;
-}
-.btn.solid { background: var(--hero-ink); color: var(--hero); border-color: var(--hero-ink); }
-.btn svg { width: 17px; height: 17px; }
-.btn:hover { background: rgba(255, 255, 255, 0.14); }
-.btn.solid:hover { background: #ffffff; }
-.btn:active { transform: scale(0.98); }
-.save { grid-column: 1 / -1; }
-
-/* Figures */
-.figures { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 16px 16px 0; }
-.fig {
-  padding: 14px 12px;
-  border-radius: 14px;
-  background: var(--accent-soft);
-  min-width: 0;
-}
-.fig b {
-  display: block;
-  font-family: var(--font-display);
-  font-weight: 650;
-  font-size: 19px;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-}
-.fig span { display: block; margin-top: 4px; font-size: 11.5px; color: var(--muted); line-height: 1.35; }
-
-/* Sections */
-section { padding: 22px 20px; border-bottom: 1px solid var(--rule); }
-section:last-of-type { border-bottom: 0; }
-h2 {
-  margin: 0 0 12px;
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.12em;
+.label {
+  font: 500 11px var(--font-mono);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
 }
-
-/* Link tiles */
-.links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.link {
+.x { color: var(--lime); letter-spacing: 0.3em; }
+ 
+/* Meta bar */
+.meta { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+ 
+/* Hero */
+.hero { display: grid; gap: 18px; }
+.hello { margin: 0; font: 400 15px var(--font-pixel); color: var(--lime); letter-spacing: 0.04em; }
+.namebox {
   position: relative;
+  container-type: inline-size;
+  border: 2px solid var(--yellow);
+  padding: 30px 16px 26px;
+  margin-top: 8px;
+}
+h1 {
+  margin: 0;
+  font-family: var(--font-pixel);
+  font-weight: 700;
+  font-size: min(76px, calc(100cqi / 7.9));
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+.chip {
+  position: absolute;
+  font: 600 11px var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 5px 9px;
+  border: 2px solid var(--ink);
+  white-space: nowrap;
+}
+.chip.title { top: -15px; left: 12px; background: var(--yellow); transform: rotate(-2deg); box-shadow: 3px 3px 0 var(--ink); }
+.chip.scope { bottom: -15px; right: 12px; background: var(--lime); transform: rotate(1.5deg); box-shadow: 3px 3px 0 var(--ink); }
+.note { position: absolute; font: 500 12px var(--font-mono); color: var(--muted); white-space: nowrap; }
+.note.n1 { top: -26px; right: 4px; }
+.status { margin: 22px 0 0; display: flex; align-items: center; gap: 10px; }
+.status i { width: 9px; height: 9px; background: var(--lime); display: inline-block; animation: blink 1.2s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0.15; } }
+ 
+/* Screen frame */
+.screen {
+  border: 2px solid var(--text);
+  border-radius: 14px;
+  background: var(--ink);
+  padding: 12px;
   display: grid;
-  gap: 12px;
-  padding: 14px;
-  border: 1px solid var(--rule);
-  border-radius: 16px;
-  text-decoration: none;
+  gap: 14px;
+  box-shadow: 6px 6px 0 var(--lime-deep);
+}
+.bar { display: flex; justify-content: flex-start; align-items: center; gap: 10px; flex-wrap: wrap; }
+.bar b { font: 700 14px var(--font-pixel); letter-spacing: 0.02em; }
+.bar nav { display: flex; gap: 6px; }
+.bar nav a {
+  font: 500 10.5px var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border: 1.5px solid var(--muted);
+  background: var(--panel);
+}
+.bar nav a:hover, .bar nav a:focus-visible { border-color: var(--lime); color: var(--lime); outline: none; }
+.cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.cols p { margin: 0; font-size: 12px; line-height: 1.55; max-width: 58ch; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); }
+.cols b { color: var(--text); font-weight: 600; }
+ 
+/* Buttons */
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 52px;
+  font: 700 15px var(--font-pixel);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn.lime { background: var(--lime); box-shadow: 5px 5px 0 var(--lime-deep); }
+.btn.yellow { background: var(--yellow); box-shadow: 5px 5px 0 var(--yellow-deep); }
+.btn.blue { background: var(--blue); color: #fff; box-shadow: 5px 5px 0 var(--blue-deep); }
+.btn:hover, .btn:active { transform: translate(5px, 5px); box-shadow: 0 0 0 transparent; }
+.save { grid-column: 1 / -1; }
+ 
+/* Statement */
+.statement { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; container-type: inline-size; }
+.statement .side { display: grid; gap: 4px; padding-top: 6px; }
+.big {
+  margin: 0;
+  text-align: right;
+  font-family: var(--font-pixel);
+  font-weight: 700;
+  font-size: min(50px, calc(100cqi / 12.6));
+  line-height: 1;
+  text-transform: uppercase;
+}
+ 
+/* Section heads */
+.head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin: 0 0 18px; }
+.head h2 { margin: 0; font: 700 22px var(--font-pixel); text-transform: uppercase; letter-spacing: 0.01em; }
+ 
+/* Summary card */
+.sum {
+  background: var(--lime);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  box-shadow: 7px 7px 0 var(--lime-deep);
+  padding: 18px;
+  display: grid;
+  gap: 16px;
+}
+.sum-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.sum-top .num { font: 700 44px var(--font-pixel); line-height: 0.9; }
+.sum-top .what { font: 600 12px var(--font-mono); text-align: right; letter-spacing: 0.08em; text-transform: uppercase; }
+.kv { margin: 0; display: grid; border-top: 2px solid var(--ink); }
+.kv div { display: grid; grid-template-columns: 10ch 1fr; gap: 12px; padding: 8px 0; border-bottom: 1px dashed rgba(16,16,16,0.4); }
+.kv div:last-child { border-bottom: 0; padding-bottom: 0; }
+.kv dt { font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; padding-top: 1px; }
+.kv dd { margin: 0; min-width: 0; }
+ 
+/* Link tiles */
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.tile {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 14px;
   min-width: 0;
-  transition: border-color .15s ease, background-color .15s ease, transform .15s ease;
+  padding: 14px;
+  background: var(--panel);
+  border: 2px solid var(--text);
+  box-shadow: 5px 5px 0 var(--lime);
+  transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
 }
-.link:hover { border-color: var(--accent); background: var(--accent-soft); }
-.link:active { transform: scale(0.98); }
-.link:focus-visible, .btn:focus-visible, .copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.ico {
-  width: 36px; height: 36px; border-radius: 11px;
-  background: var(--accent-soft); color: var(--accent);
+.tile:hover, .tile:focus-visible { transform: translate(5px, 5px); box-shadow: 0 0 0 transparent; background: var(--lime); color: var(--ink); outline: none; }
+.tile .g {
+  width: 46px; height: 46px;
   display: grid; place-items: center;
+  background: #fff;
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
 }
-.link:hover .ico { background: var(--sheet); }
-.ico svg { width: 18px; height: 18px; }
-.txt { min-width: 0; }
-.label { display: block; font-weight: 600; font-size: 14.5px; line-height: 1.3; letter-spacing: -0.01em; }
-.sub { display: block; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
-.go { position: absolute; top: 14px; right: 14px; color: var(--muted); }
-.go svg { width: 15px; height: 15px; display: block; }
-
-/* Contact */
-.contact { display: grid; margin: 0; }
+.tile .g svg { width: 26px; height: 26px; display: block; }
+.tile .t { display: grid; min-width: 0; }
+.tile .k { font-weight: 600; font-size: 15px; }
+.tile .v { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.tile:hover .v, .tile:focus-visible .v { color: var(--ink); }
+.tile .go { font: 500 12px var(--font-mono); letter-spacing: 0.1em; }
+ 
+/* Contact panel */
+.contact {
+  background: var(--panel);
+  border: 2px solid var(--text);
+  box-shadow: 6px 6px 0 var(--yellow);
+}
 .crow {
   display: grid;
-  grid-template-columns: 72px 1fr auto;
+  grid-template-columns: 9ch minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
-  padding: 11px 0;
-  border-bottom: 1px solid var(--rule);
+  padding: 14px 16px;
+  border-bottom: 2px solid var(--text);
 }
 .crow:last-child { border-bottom: 0; }
-.crow dt { font-size: 12.5px; color: var(--muted); }
-.crow dd { margin: 0; min-width: 0; font-size: 14.5px; font-weight: 500; overflow-wrap: anywhere; user-select: all; font-variant-numeric: tabular-nums; }
-.crow dd a { text-decoration: none; }
+.crow .k { font: 400 13px var(--font-pixel); color: var(--yellow); }
+.crow .v { min-width: 0; overflow-wrap: anywhere; font-weight: 500; user-select: all; }
 .copy {
-  font: 500 12px var(--font-body);
-  color: var(--accent);
-  background: var(--accent-soft);
-  border: 0;
-  border-radius: 999px;
-  padding: 6px 12px;
+  font: 600 11px var(--font-mono);
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  background: var(--yellow);
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--yellow-deep);
+  padding: 5px 8px;
   cursor: pointer;
 }
-
-/* Experience timeline */
-.roles { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
-.role {
+.copy:active { transform: translate(3px, 3px); box-shadow: none; }
+ 
+/* Experience folders */
+.folders { display: grid; gap: 46px; padding-top: 26px; }
+.folder { position: relative; padding: 18px 18px 20px; border: 2px solid var(--ink); }
+.folder .tab {
+  position: absolute; left: -2px; top: -30px;
+  height: 30px;
+  display: flex; align-items: center;
+  padding: 0 30px 0 12px;
+  font: 600 11px var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 100%, 0 100%);
+  background: inherit;
+  color: inherit;
+}
+.folder h3 { margin: 0; font: 700 20px var(--font-pixel); line-height: 1.1; text-transform: uppercase; }
+.folder .org { display: block; margin-top: 6px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.8; }
+.folder p { margin: 10px 0 0; font-size: 13.5px; max-width: 58ch; }
+.f-blue { background: var(--blue); color: #fff; box-shadow: 7px 7px 0 var(--blue-deep); }
+.f-yellow { background: var(--yellow); color: var(--ink); box-shadow: 7px 7px 0 var(--yellow-deep); }
+.f-lime { background: var(--lime); color: var(--ink); box-shadow: 7px 7px 0 var(--lime-deep); }
+.f-cream { background: var(--cream); color: var(--ink); box-shadow: 7px 7px 0 var(--cream-deep); }
+ 
+/* Credentials: archive card */
+.archive {
   position: relative;
-  display: grid; grid-template-columns: 1fr auto; gap: 2px 12px;
-  padding-left: 20px;
-}
-.role::before {
-  content: ""; position: absolute; left: 0; top: 7px;
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--sheet); border: 2px solid var(--accent);
-}
-.role:not(:last-child)::after {
-  content: ""; position: absolute; left: 4px; top: 19px; bottom: -14px;
-  width: 1px; background: var(--rule);
-}
-.role h3 { margin: 0; font-size: 14.5px; font-weight: 600; line-height: 1.35; letter-spacing: -0.01em; }
-.role .org { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
-.role .yrs { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); white-space: nowrap; padding-top: 2px; font-variant-numeric: tabular-nums; }
-.role p { grid-column: 1 / -1; margin: 4px 0 0; font-size: 13.5px; color: var(--ink); max-width: 60ch; }
-
-/* Platforms */
-.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
-.chips li {
-  font-size: 12.5px; font-weight: 500;
-  padding: 5px 11px;
-  border-radius: 999px;
-  background: var(--page);
+  background: var(--cream);
   color: var(--ink);
+  padding: 18px 18px 20px;
+  box-shadow: 7px 7px 0 var(--cream-deep);
+  transform: rotate(-0.6deg);
 }
-.chips.key li { background: var(--accent-soft); color: var(--accent); }
-.certs { margin: 16px 0 0; padding: 0; list-style: none; display: grid; gap: 0; font-size: 13.5px; }
-.certs li { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 8px 0; border-top: 1px solid var(--rule); }
-.certs .by { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); white-space: nowrap; }
-
-footer {
-  max-width: 480px; margin: 16px auto 0;
-  font-size: 12px; color: var(--muted);
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px;
-  padding-inline: 8px;
+.archive-h { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border-bottom: 2px solid var(--ink); padding-bottom: 8px; }
+.archive-h b { font: 700 18px var(--font-pixel); text-transform: uppercase; }
+.archive-h span { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.ledger { width: 100%; border-collapse: collapse; margin-top: 4px; font-size: 13px; }
+.ledger th { text-align: left; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; padding: 8px 6px 6px; border-bottom: 1px solid var(--ink); }
+.ledger td { padding: 8px 6px; border-bottom: 1px solid rgba(16,16,16,0.25); vertical-align: top; }
+.ledger td:first-child, .ledger th:first-child { width: 6ch; border-right: 2px solid #c8463c; font-variant-numeric: tabular-nums; }
+.ledger td:last-child, .ledger th:last-child { text-align: right; }
+.stamp {
+  position: absolute; right: 18px; bottom: 74px;
+  font: 700 17px var(--font-pixel);
+  color: var(--stamp);
+  border: 3px solid var(--stamp);
+  outline: 1px solid var(--stamp); outline-offset: 3px;
+  padding: 4px 10px;
+  transform: rotate(-11deg);
+  opacity: 0.78;
+  pointer-events: none;
 }
-.toast {
-  position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-  transform: translateX(-50%);
-  background: var(--ink); color: var(--sheet);
-  font-size: 13px; padding: 9px 16px; border-radius: 999px;
+.platforms { margin-top: 16px; display: grid; gap: 8px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.tags li { font-size: 12px; font-weight: 500; padding: 3px 8px; border: 1.5px solid var(--ink); background: transparent; }
+.tags.key li { background: var(--ink); color: var(--cream); font-weight: 600; }
+ 
+footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; border-top: 2px solid var(--text); padding-top: 14px; }
+footer b { font: 700 14px var(--font-pixel); }
+ 
+.btn:focus-visible, .copy:focus-visible { outline: 2px dashed var(--text); outline-offset: 4px; }
+ 
+@media (max-width: 400px) {
+  .page { padding-inline: 16px; gap: 40px; }
+  .tiles { gap: 14px; }
+  .tile { padding: 12px; }
+  .crow { grid-template-columns: 1fr auto; padding: 12px 14px; }
+  .crow .k { grid-column: 1 / -1; }
+  .stamp { position: static; display: inline-block; margin: 16px 0 0 6px; }
 }
-@media (max-width: 380px) {
-  .band { padding: 20px 18px 22px; }
-  section { padding: 20px 16px; }
-  .figures { padding: 12px 12px 0; }
-  .fig b { font-size: 17px; }
-  .crow { grid-template-columns: 1fr auto; }
-  .crow dt { grid-column: 1 / -1; }
+@media (prefers-reduced-motion: reduce) {
+  .status i { animation: none; }
+  .btn, .tile { transition: none; }
 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
 <body>
-
-<div class="wrap">
-  <main class="card">
-    <header class="band">
-      <div class="top"><div class="mono" aria-hidden="true">DM</div><span class="status"><i></i>Working remotely</span></div>
-      <div>
-        <h1>David Maghanoy</h1>
-        <p class="eyebrow">US &amp; AU Accountant</p>
-        <p class="lede">HOA and community association accounting, full-cycle bookkeeping and month-end close for clients in the United States and Australia.</p>
-      </div>
-      <div class="actions">
-        <a class="btn solid" href="mailto:djcm0509@gmail.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Email
-        </a>
-        <a class="btn" href="https://wa.me/639693004379" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.2A8.5 8.5 0 1 1 20 11.5z"/></svg>WhatsApp
-        </a>
-        <button class="btn save" id="save" type="button" hidden>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Save contact
-        </button>
-      </div>
-    </header>
-
-    <div class="figures" aria-label="At a glance">
-      <div class="fig"><b>Bookkeeping</b><span>&amp; accounting</span></div>
-      <div class="fig"><b>US · AU</b><span>associations &amp; SMEs served</span></div>
-      <div class="fig"><b>Full-cycle</b><span>AP/AR to month-end close</span></div>
+ 
+<div class="page">
+  <div class="meta label"><span>DM / Card</span><span class="x">×××</span><span>US · AU</span></div>
+ 
+  <header class="hero">
+    <p class="hello">Hello, I'm...</p>
+    <div class="namebox">
+      <span class="chip title">US &amp; AU Accountant</span>
+      <span class="note n1" aria-hidden="true">&lt;-- that's me</span>
+      <h1>David<br>Maghanoy</h1>
+      <span class="chip scope">Full-cycle books</span>
     </div>
-
-    <section aria-labelledby="h-links">
-      <h2 id="h-links">Profiles &amp; documents</h2>
-      <div class="links">
-        <a class="link" href="https://www.linkedin.com/in/davidjohnwade/" target="_blank" rel="noopener">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.6 4.77 5.98v5.47h-4v-4.85c0-1.16-.02-2.65-1.62-2.65-1.62 0-1.87 1.26-1.87 2.57v4.93h-4v-11z"/></svg></span>
-          <span class="txt"><span class="label">LinkedIn</span><span class="sub">in/davidjohnwade</span></span>
-          <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-        </a>
-        <a class="link" href="https://drive.google.com/file/d/1dnPM7q50Nloekch_7qiC18H8XUq_khFC/view?usp=sharing" target="_blank" rel="noopener">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
-          <span class="txt"><span class="label">Résumé</span><span class="sub">2026 CV · PDF</span></span>
-          <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-        </a>
-        <a class="link" href="https://drive.google.com/drive/folders/1lF5yvcF1fEjoOb5epHA83pUwemQBGs8E?usp=sharing" target="_blank" rel="noopener">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
-          <span class="txt"><span class="label">Sample works</span><span class="sub">Portfolio folder</span></span>
-          <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-        </a>
-        <a class="link" href="https://github.com/djcm0509" target="_blank" rel="noopener">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></span>
-          <span class="txt"><span class="label">GitHub</span><span class="sub">djcm0509</span></span>
-          <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-        </a>
-        <a class="link" href="https://www.instagram.com/david_johnwade/" target="_blank" rel="noopener">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></span>
-          <span class="txt"><span class="label">Instagram</span><span class="sub">@david_johnwade</span></span>
-          <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-        </a>
-        <a class="link" href="https://www.facebook.com/davidjohnwade0" target="_blank" rel="noopener">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.25-1.46 1.5-1.46h1.6V4.46A21 21 0 0 0 14.27 4.3c-2.3 0-3.87 1.4-3.87 3.98v2.22H7.8v3h2.6V21h3.1z"/></svg></span>
-          <span class="txt"><span class="label">Facebook</span><span class="sub">davidjohnwade0</span></span>
-          <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-        </a>
+    <p class="status label"><i aria-hidden="true"></i>Working remotely</p>
+  </header>
+ 
+  <section class="screen" aria-label="About">
+    <div class="bar">
+      <nav aria-label="Jump to">
+        <a href="#links">Links</a><a href="#contact">Contact</a><a href="#work">Work</a>
+      </nav>
+    </div>
+    <div class="cols">
+      <p><b>On the books,</b> HOA and community association accounting for clients in the US and Australia.</p>
+      <p><b>Behind the numbers,</b> full-cycle bookkeeping, AP/AR, reconciliations and month-end close.</p>
+    </div>
+  </section>
+ 
+  <div class="actions">
+    <a class="btn lime" href="mailto:djcm0509@gmail.com">Email</a>
+    <a class="btn yellow" href="https://wa.me/639693004379" target="_blank" rel="noopener">WhatsApp</a>
+    <button class="btn blue save" id="save" type="button" hidden>Save contact</button>
+  </div>
+ 
+  <section class="statement" aria-label="Practice">
+    <div class="side label"><span>About</span><span class="x">×××</span></div>
+    <p class="big">Full-cycle<br>bookkeeping<br>&amp; accounting</p>
+  </section>
+ 
+  <section class="sum" aria-label="Summary">
+    <div class="sum-top"><span class="num">US/AU</span><span class="what">Clients</span></div>
+    <dl class="kv">
+      <div><dt>Practice</dt><dd>Bookkeeping &amp; accounting</dd></div>
+      <div><dt>Clients</dt><dd>Community associations &amp; SMEs in the US and Australia</dd></div>
+      <div><dt>Scope</dt><dd>Full-cycle, AP/AR to month-end close</dd></div>
+    </dl>
+  </section>
+ 
+  <section id="links" aria-labelledby="h-links">
+    <div class="head"><h2 id="h-links">Links</h2><span class="label">Profiles &amp; docs <span class="x">×××</span></span></div>
+    <div class="tiles">
+      <a class="tile" href="https://www.linkedin.com/in/davidjohnwade/" target="_blank" rel="noopener"><span class="g"><svg viewBox="0 0 24 24" role="img" aria-label="LinkedIn"><rect x="2" y="2" width="20" height="20" fill="#fff"/><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#0A66C2"/></svg></span><span class="t"><span class="k">LinkedIn</span><span class="v">in/davidjohnwade</span></span><span class="go" aria-hidden="true">OPEN --&gt;</span></a>
+      <a class="tile" href="https://drive.google.com/file/d/1dnPM7q50Nloekch_7qiC18H8XUq_khFC/view?usp=sharing" target="_blank" rel="noopener"><span class="g"><svg viewBox="0 0 87.3 78" role="img" aria-label="Google Drive"><path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/><path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/><path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/><path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/><path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/><path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/></svg></span><span class="t"><span class="k">Résumé</span><span class="v">2026 CV, PDF</span></span><span class="go" aria-hidden="true">OPEN --&gt;</span></a>
+      <a class="tile" href="https://drive.google.com/drive/folders/1lF5yvcF1fEjoOb5epHA83pUwemQBGs8E?usp=sharing" target="_blank" rel="noopener"><span class="g"><svg viewBox="0 0 87.3 78" role="img" aria-label="Google Drive"><path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/><path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/><path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/><path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/><path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/><path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/></svg></span><span class="t"><span class="k">Sample works</span><span class="v">Portfolio folder</span></span><span class="go" aria-hidden="true">OPEN --&gt;</span></a>
+      <a class="tile" href="https://github.com/djcm0509" target="_blank" rel="noopener"><span class="g"><svg viewBox="0 0 24 24" role="img" aria-label="GitHub"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#181717"/></svg></span><span class="t"><span class="k">GitHub</span><span class="v">djcm0509</span></span><span class="go" aria-hidden="true">OPEN --&gt;</span></a>
+      <a class="tile" href="https://www.instagram.com/david_johnwade/" target="_blank" rel="noopener"><span class="g"><svg viewBox="0 0 24 24" role="img" aria-label="Instagram"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".28" stop-color="#FA7E1E"/><stop offset=".55" stop-color="#D62976"/><stop offset=".8" stop-color="#962FBF"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" fill="url(#igg)"/></svg></span><span class="t"><span class="k">Instagram</span><span class="v">@david_johnwade</span></span><span class="go" aria-hidden="true">OPEN --&gt;</span></a>
+      <a class="tile" href="https://www.facebook.com/davidjohnwade0" target="_blank" rel="noopener"><span class="g"><svg viewBox="0 0 24 24" role="img" aria-label="Facebook"><circle cx="12" cy="12" r="11" fill="#fff"/><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" fill="#0866FF"/></svg></span><span class="t"><span class="k">Facebook</span><span class="v">davidjohnwade0</span></span><span class="go" aria-hidden="true">OPEN --&gt;</span></a>
+    </div>
+  </section>
+ 
+  <section id="contact" aria-labelledby="h-contact">
+    <div class="head"><h2 id="h-contact">Contact</h2><span class="label">Direct line <span class="x">×××</span></span></div>
+    <div class="contact">
+      <div class="crow"><span class="k">Email</span><a class="v" id="v-email" href="mailto:djcm0509@gmail.com">djcm0509@gmail.com</a><button class="copy" type="button" data-copy="djcm0509@gmail.com" data-target="v-email">COPY</button></div>
+      <div class="crow"><span class="k">Mobile</span><a class="v" id="v-phone" href="tel:+639693004379">+63 969 300 4379</a><button class="copy" type="button" data-copy="+639693004379" data-target="v-phone">COPY</button></div>
+      <div class="crow"><span class="k">Hours</span><span class="v" style="user-select:auto">US &amp; AU business hours, remote</span><span></span></div>
+    </div>
+  </section>
+ 
+  <section id="work" aria-labelledby="h-work">
+    <div class="head"><h2 id="h-work">Experience</h2><span class="label">Recent roles <span class="x">×××</span></span></div>
+    <div class="folders">
+      <article class="folder f-blue">
+        <span class="tab">+ 2024–2026</span>
+        <h3>Accounting Specialist</h3>
+        <span class="org">Folio Association Management · US &amp; AU</span>
+        <p>Full-cycle accounting and month-end close for community associations: financial statements, bank reconciliations, reserve transfers, special assessments and new-association onboarding.</p>
+      </article>
+      <article class="folder f-yellow">
+        <span class="tab">+ 2026–now</span>
+        <h3>Financial Controller</h3>
+        <span class="org">AWS User Group e:Novators Philippines</span>
+        <p>Designed the group's full-charge bookkeeping workflow and financial controls, keeping budget variances within 2%.</p>
+      </article>
+      <article class="folder f-lime">
+        <span class="tab">+ 2024–2025</span>
+        <h3>Financial Analyst</h3>
+        <span class="org">TaskUs · Philippines · Contract</span>
+        <p>Forecasting and cost analysis; co-authored KPI reporting that improved planning accuracy by 3%.</p>
+      </article>
+      <article class="folder f-cream">
+        <span class="tab">+ 2018–2026</span>
+        <h3>Bookkeeper</h3>
+        <span class="org">Rocket Station</span>
+        <p>General ledger, AP/AR and month-end support for external CPAs, across CINC Systems, Xero and QuickBooks.</p>
+      </article>
+    </div>
+  </section>
+ 
+  <section aria-labelledby="h-creds">
+    <div class="head"><h2 id="h-creds">On file</h2><span class="label">Credentials <span class="x">×××</span></span></div>
+    <div class="archive">
+      <div class="archive-h"><b>Credentials</b><span>Card no. DM-01</span></div>
+      <table class="ledger">
+        <thead><tr><th>Year</th><th>Credential</th><th>Issuer</th></tr></thead>
+        <tbody>
+          <tr><td>2025</td><td>Bookkeeping Certification</td><td>Intuit</td></tr>
+          <tr><td>—</td><td>Xero Advisor Certified</td><td>Xero</td></tr>
+          <tr><td>2025</td><td>CC Domain 1: Security Principles</td><td>ISC2</td></tr>
+          <tr><td>2026</td><td>AI &amp; ML Scholars Challenge</td><td>AWS</td></tr>
+        </tbody>
+      </table>
+      <span class="stamp" aria-hidden="true">CERTIFIED</span>
+      <div class="platforms">
+        <span class="label" style="color:var(--ink)">Platforms</span>
+        <ul class="tags key"><li>CINC Systems</li><li>Xero</li><li>QuickBooks Online</li><li>MYOB</li></ul>
+        <ul class="tags"><li>AppFolio</li><li>Buildium</li><li>SAP</li><li>Power BI</li><li>Microsoft 365</li><li>Google Workspace</li></ul>
       </div>
-    </section>
-
-    <section aria-labelledby="h-contact">
-      <h2 id="h-contact">Contact</h2>
-      <dl class="contact">
-        <div class="crow">
-          <dt>Email</dt>
-          <dd id="v-email"><a href="mailto:djcm0509@gmail.com">djcm0509@gmail.com</a></dd>
-          <button class="copy" type="button" data-copy="djcm0509@gmail.com" data-target="v-email" data-name="Email">Copy</button>
-        </div>
-        <div class="crow">
-          <dt>Mobile</dt>
-          <dd id="v-phone"><a href="tel:+639693004379">+63 969 300 4379</a></dd>
-          <button class="copy" type="button" data-copy="+639693004379" data-target="v-phone" data-name="Number">Copy</button>
-        </div>
-        <div class="crow">
-          <dt>Hours</dt>
-          <dd>US &amp; AU business hours, remote</dd>
-          <span></span>
-        </div>
-      </dl>
-    </section>
-
-    <section aria-labelledby="h-exp">
-      <h2 id="h-exp">Experience</h2>
-      <ul class="roles">
-        <li class="role">
-          <h3>Accounting Specialist</h3><span class="yrs">2024–2026</span>
-          <span class="org">Folio Association Management · US &amp; AU</span>
-          <p>Full-cycle accounting and month-end close for community associations: financial statements, bank reconciliations, reserve transfers, special assessments and new-association onboarding.</p>
-        </li>
-        <li class="role">
-          <h3>Financial Controller</h3><span class="yrs">2026–now</span>
-          <span class="org">AWS User Group e:Novators Philippines</span>
-          <p>Designed the group's full-charge bookkeeping workflow and financial controls, keeping budget variances within 2%.</p>
-        </li>
-        <li class="role">
-          <h3>Financial Analyst, contract</h3><span class="yrs">2024–2025</span>
-          <span class="org">TaskUs · Philippines</span>
-          <p>Forecasting and cost analysis; co-authored KPI reporting that improved planning accuracy by 3%.</p>
-        </li>
-        <li class="role">
-          <h3>Bookkeeper</h3><span class="yrs">2018–2026</span>
-          <span class="org">Rocket Station</span>
-          <p>General ledger, AP/AR and month-end support for external CPAs, across CINC Systems, Xero and QuickBooks.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="h-tools">
-      <h2 id="h-tools">Platforms &amp; credentials</h2>
-      <ul class="chips key">
-        <li>CINC Systems</li><li>Xero</li><li>QuickBooks Online</li><li>MYOB</li>
-      </ul>
-      <ul class="chips" style="margin-top:6px">
-        <li>AppFolio</li><li>Buildium</li><li>SAP</li><li>Power BI</li><li>Microsoft 365</li><li>Google Workspace</li>
-      </ul>
-      <ul class="certs">
-        <li><span>Bookkeeping Certification</span><span class="by">Intuit · 2025</span></li>
-        <li><span>Xero Advisor Certified</span><span class="by">Xero</span></li>
-        <li><span>CC Domain 1: Security Principles</span><span class="by">ISC2 · 2025</span></li>
-        <li><span>AI &amp; ML Scholars Challenge</span><span class="by">AWS · 2026</span></li>
-      </ul>
-    </section>
-  </main>
+    </div>
+  </section>
+ 
   <footer>
-    <span>David Johnwade C. Maghanoy</span>
+    <b>David Maghanoy</b>
+    <span class="label"><span class="x">×××</span> djcm0509.github.io</span>
   </footer>
 </div>
-<div id="toast" class="toast" role="status" hidden></div>
-
+ 
 <script>
 (function () {
-  var toast = document.getElementById("toast"), t;
-  function show(msg) { toast.textContent = msg; toast.hidden = false; clearTimeout(t); t = setTimeout(function () { toast.hidden = true; }, 1800); }
-  function select(el) { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); show("Selected. Use your device's copy."); }
-
   document.querySelectorAll(".copy").forEach(function (b) {
     b.addEventListener("click", function () {
       var el = document.getElementById(b.dataset.target);
+      function flash(t) { b.textContent = t; setTimeout(function () { b.textContent = "COPY"; }, 1600); }
+      function select() {
+        var r = document.createRange(); r.selectNodeContents(el);
+        var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+        flash("SELECTED");
+      }
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(b.dataset.copy).then(function () { show(b.dataset.name + " copied"); }, function () { select(el); });
-      } else { select(el); }
+        navigator.clipboard.writeText(b.dataset.copy).then(function () { flash("COPIED"); }, select);
+      } else { select(); }
     });
   });
-
-  // "Save contact" downloads a vCard. Shown only when the page is opened directly (the live site), not inside an embedded preview.
+ 
+ 
   var embedded = false;
   try { embedded = window.self !== window.top; } catch (e) { embedded = true; }
   var save = document.getElementById("save");
@@ -458,7 +478,7 @@ footer {
         "TITLE:US & AU Accountant",
         "EMAIL;TYPE=INTERNET:djcm0509@gmail.com",
         "TEL;TYPE=CELL:+639693004379",
-        "URL:https://www.linkedin.com/in/davidjohnwade/",
+        "URL:https://djcm0509.github.io/",
         "NOTE:HOA & community association accounting and bookkeeping for US and AU clients.",
         "END:VCARD"
       ].join("\r\n");
@@ -470,6 +490,6 @@ footer {
   }
 })();
 </script>
-
+ 
 </body>
 </html>
